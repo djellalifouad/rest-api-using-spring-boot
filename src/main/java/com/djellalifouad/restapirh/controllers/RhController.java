@@ -35,7 +35,7 @@ public Employee addEmployee(Employee employee) {
     // a
     @GetMapping("/departement/employe-projet")
     public List<String> getEmployesWithDepName(@RequestParam("name") String name) {
-        return employeeRepository.findEmployeeByEmailEndingWith(name);
+        return employeeRepository.findEmployeeWithDepName(name);
     } ;
     //b
     @PostMapping("/employe")

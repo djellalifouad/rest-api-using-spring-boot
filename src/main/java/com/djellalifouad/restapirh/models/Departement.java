@@ -22,5 +22,4 @@ public class Departement {
     @OneToMany(mappedBy = "departement")
     @ToString.Exclude
     private List<Employee> employeeList;
-
 }

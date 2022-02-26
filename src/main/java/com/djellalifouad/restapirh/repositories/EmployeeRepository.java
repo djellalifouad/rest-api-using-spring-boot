@@ -19,7 +19,9 @@ public interface EmployeeRepository  extends JpaRepository<Employee,Long> {
     @Query(value = "select count(*) from Employee where Employee.genre = :genre",nativeQuery = true)
     int  getNbrEmployeeBuGenre(@Param("genre") String genre);
     @Query(value = "select concat('nom projet : ' ,Projet.nom,' ','id emp : ',Employee.id) from Projet,Employee,Departement where Departement.nom = :nom and Employee.projet_id = Projet.id and Employee.departement_id =Departement.id  ",nativeQuery = true)
-    List<String> findEmployeeByEmailEndingWith(@Param("nom") String nom);
+    List<String> findEmployeeWithDepName(@Param("nom") String nom);
+
+    List<Employee> findEmployeeByEmailEndingWith(String email);
 
 
 
