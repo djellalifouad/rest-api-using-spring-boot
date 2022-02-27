@@ -1,16 +1,13 @@
-package com.djellalifouad.restapirh.models;
+package com.djellalifouad.restapirh;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.data.repository.cdi.Eager;
-
+import lombok.ToString;
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 import java.io.Serializable;
-@Eager
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable

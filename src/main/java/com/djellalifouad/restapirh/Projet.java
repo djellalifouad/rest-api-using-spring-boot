@@ -1,11 +1,11 @@
-package com.djellalifouad.restapirh.models;
+package com.djellalifouad.restapirh;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
-import java.util.List;
+import java.util.Collection;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -16,6 +16,7 @@ public class Projet {
     @Column(nullable = false,length = 20)
     private String nom;
     private int duree;
-    @OneToMany(mappedBy = "id")
-   private List<Employee> employee;
+
+    @OneToMany(mappedBy = "projet",fetch = FetchType.LAZY)
+   private Collection<Employee> employee;
 }

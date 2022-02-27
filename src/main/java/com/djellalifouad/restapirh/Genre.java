@@ -1,4 +1,4 @@
-package com.djellalifouad.restapirh.models;
+package com.djellalifouad.restapirh;
 
 public enum Genre {
     Mr,
